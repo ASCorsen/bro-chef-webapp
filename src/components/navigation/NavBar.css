@@ -1,3 +1,46 @@
-.logo-container{
+nav {
+    display: flex;
+    padding: 20px 35px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-center-styling {
+    text-decoration: none;
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.nav-right-styling {
+    display: flex;
+    gap: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+}
+nav a:link {
+    color: black;
+}
+nav a:hover {
+    color: #0E9F6E;
+}
+nav a:active {
+    text-decoration-line: underline;
+    color: #0E9F6E;
+    font-weight: bold;
+    border-bottom: 1px #0E9F6E;
+}
+
+.active-link {
+    text-decoration-color: #0E9F6E;
+    font-weight: bold;
+    border-bottom: 3px solid #0E9F6E;
+    padding-bottom: 3px;
 
 }
+
+
+
