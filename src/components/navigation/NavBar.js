@@ -1,9 +1,16 @@
 import React from 'react';
 import './NavBar.css'
 import logo from '../../assets/logonav214.png'
-import {NavLink} from "react-router-dom";
+import {NavLink, useHistory} from "react-router-dom";
+import Button from "../button/Button";
 
 const NavBar = () => {
+    const history = useHistory()
+
+    function signUpFunction() {
+        history.push("/sign-up");
+    }
+
     return (
         <nav>
 <span className="nav-left-styling">
@@ -27,9 +34,8 @@ const NavBar = () => {
                 <NavLink to="/log-in" activeClassName="active-link">
                 Log in
             </NavLink>
-                 <NavLink to="/sign-up">
-                <button>Sign Up</button>
-            </NavLink>
+                <Button clickHandler={signUpFunction}
+                >Sign Up</Button>
 </span>
         </nav>
     );

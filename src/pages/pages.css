@@ -1,0 +1,19 @@
+a {
+    text-decoration: none;
+    color: black;
+}
+a:link {
+    color: black;
+}
+
+a:hover {
+    color: #0E9F6E;
+}
+
+a:active {
+    text-decoration-line: underline;
+    color: #0E9F6E;
+    font-weight: bold;
+    border-bottom: 1px #0E9F6E;
+}
+

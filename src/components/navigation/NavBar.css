@@ -3,6 +3,7 @@ nav {
     padding: 20px 35px;
     align-items: center;
     justify-content: space-between;
+    font-size: 18px;
 }
 
 .nav-center-styling {
@@ -14,6 +15,7 @@ nav {
 
 .nav-right-styling {
     display: flex;
+    align-items: center;
     gap: 10px;
 }
 
@@ -24,9 +26,11 @@ nav a {
 nav a:link {
     color: black;
 }
+
 nav a:hover {
     color: #0E9F6E;
 }
+
 nav a:active {
     text-decoration-line: underline;
     color: #0E9F6E;
@@ -39,8 +43,10 @@ nav a:active {
     font-weight: bold;
     border-bottom: 3px solid #0E9F6E;
     padding-bottom: 3px;
-
 }
 
-
+.logo-styling {
+    width: 214px;
+    height: 55px;
+}
 
