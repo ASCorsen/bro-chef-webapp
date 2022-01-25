@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import Slogan from "../components/slogantext/Slogan";
 import sloganImg from "../assets/sloganimg.png";
 import Button from "../components/button/Button";
-import styles from "../components/button/Button.module.css"
+
 
 const Contacts = () => {
     const [name, setName] = useState('');
@@ -54,16 +54,14 @@ const Contacts = () => {
                         value={comment}
                         onChange={(e) => setComment(e.target.value)}
                     />
-                    <Button type="submit"
-                            isDisabled={ !name || !email || !comment}
-                            clickHandler={handleSubmit}
-                    >Submit</Button>
-
-
+                    <div className="btn-contact-styling">
+                        <Button type="submit"
+                                isDisabled={ !name || !email || !comment}
+                                clickHandler={handleSubmit}
+                        >Submit</Button>
+                    </div>
                 </label>
             </form>
-
-            Contacts page
         </div>
     );
 };
