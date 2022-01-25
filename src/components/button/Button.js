@@ -1,11 +1,12 @@
 import React from 'react';
-import '../button/Button.css'
+import styles from './Button.module.css'
 
-const Button = ({isDisabled, clickHandler, children}) => {
+const Button = ({isDisabled, clickHandler, children, styleCompId}) => {
     return (
         <div>
-            <button className="button-styling"
-                    type="button"
+            <button className={styles['button-styling']}
+                    id={styleCompId}
+                    type="submit"
                     disabled={isDisabled}
                     onClick={clickHandler}
             >

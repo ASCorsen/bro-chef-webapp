@@ -8,10 +8,21 @@ const OurApp = () => {
             <Slogan
                 title="What is Bro’chef App?"
                 img={sloganImg} imgDescription="Bro'chef-himself!">
-                <p>Bro’chef App  is simple and self explanatory you search for recipes, while calculating your kcal goal. </p>
+                <p>Bro’chef App is simple and self explanatory you search for recipes, while calculating your kcal
+                    goal. </p>
             </Slogan>
-            our app page
-            Guide on how to use the app.
+            <h2 className="content-title">Bro'chef Features!</h2>
+            <article className="article-content">
+                <p> Bro'chef shows on 1 page which recipes can be made with a simple search request.
+                    We will provide information such as calories, protein, fat and simple cooking instructions.
+                </p>
+                <p>
+                    Learning new habits and routines can be challenging for some.
+                    The web application can be a tool for insight and routine that contribute to a healthy lifestyle.
+                </p>
+                <h2>Features explained</h2>
+                <p> images en foto's van hoe de app werkt volgt</p>
+            </article>
         </div>
     );
 };

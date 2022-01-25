@@ -12,28 +12,6 @@ const Slogan = ({img, imgDescription, title, children}) => {
                 <img src={img} alt={imgDescription}/>
             </section>
         </div>
-
-        // <div className="slogan-styling">
-        //     <ul>
-        //         <li>
-        //             <img src={img} alt={imgDescription}/>
-        //         </li>
-        //         <li>
-        //             <h2>{title}</h2>
-        //             {children}
-        //         </li>
-        //     </ul>
-        //
-        // </div>
-
-    // <div className="slogan-styling">
-    //     <section className="section-styling">
-    //         <img src={img} alt={imgDescription}/>
-    //         <h2>{title}</h2>
-    //         {children}
-    //     </section>
-    // </div>
-
     );
 };
 

@@ -1,5 +1,4 @@
 .button-styling {
-    display: flex;
     background-color: #0E9F6E;
     border: none;
     color: white;
@@ -18,3 +17,4 @@
 .button-styling:hover {
     background-color: #3e8e41
 }
+
