@@ -38,6 +38,7 @@ const NavBar = () => {
                 >Sign Up</Button>
 </span>
         </nav>
+
     );
 };
 

@@ -8,6 +8,7 @@ import OurApp from "./pages/OurApp";
 import Contacts from "./pages/Contacts";
 import LogIn from "./pages/LogIn";
 import SignUp from "./pages/SignUp";
+import Footer from "./components/footer/Footer";
 
 function App() {
   return (
@@ -37,9 +38,8 @@ function App() {
         <SignUp/>
       </Route>
     </Switch>
-
 </div>
-  APP.JS page  footer / copy rights
+  <Footer/>
 </>
   );
 }
