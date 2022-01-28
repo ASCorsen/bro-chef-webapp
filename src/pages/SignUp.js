@@ -52,8 +52,8 @@ const SignUp = () => {
                         id="password-field"
                         name="password"
                         placeholder="Password"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
                     />
                 </label>
                 <div className="btn-signup-styling">

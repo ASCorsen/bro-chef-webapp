@@ -1,0 +1,35 @@
+
+.calculator-styles input {
+    font-style: normal;
+    width: 70px;
+    height: 20px;
+    gap: 10px;
+    margin-bottom: 20px;
+    margin-left: 50px;
+}
+.calculator-styles label {
+    margin-left: 100px;
+}
+.calculator-styles {
+    display: flex;
+
+}
+
+.btn-calc-styling {
+    margin-left: 195px;
+    margin-bottom: 50px;
+}
+
+.calculator-title {
+    font-size: 52px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    margin-left: 121px;
+    margin-right: 193px;
+    gap: 82px;
+}
+.calculation-field {
+    margin-left: 100px;
+}

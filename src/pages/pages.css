@@ -97,6 +97,7 @@ input {
 .btn-login-styling {
     display: flex;
     justify-content: center;
+    margin-bottom: 20px;
 }
 .btn-signup-styling {
     display: flex;
