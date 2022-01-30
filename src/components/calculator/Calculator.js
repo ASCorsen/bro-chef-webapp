@@ -83,7 +83,8 @@ const Calculator = () => {
                         </div>
                         <div className="btn-calc-styling">
                             <Button
-                                clickHandler={handleSubmit}
+                                type="submit"
+                                changeHandler={handleSubmit}
                                 styleCompId={"calc-btn-color"}
                             >calculate</Button>
                         </div>
