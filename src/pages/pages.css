@@ -2,6 +2,7 @@ a {
     text-decoration: none;
     color: black;
 }
+
 a:link {
     color: black;
 }
@@ -16,6 +17,19 @@ a:active {
     font-weight: bold;
     border-bottom: 1px #0E9F6E;
 }
+
+h2 {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    color: #4F6272;
+}
+
+p {
+    font-size: 22px;
+    font-style: italic;
+}
+
 
 .article-content {
     margin-left: 250px;
@@ -38,12 +52,14 @@ a:active {
     color: #4F6272;
     font-size: 52px;
 }
+
 .form-styling {
     display: flex;
     flex-direction: column;
     align-items: center;
 
 }
+
 input {
     font-size: 18px;
     font-style: normal;
@@ -57,19 +73,23 @@ input {
     border-radius: 10px;
     padding: 12px 24px;
 }
+
 .redirect-styling {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 .redirect-styling p {
     font-size: 18px;
     font-style: normal;
     margin: 0
 }
+
 .redirect-styling p:last-child {
     margin-bottom: 30px;
 }
+
 .redirect-styling-2 p {
     font-size: 18px;
     font-style: normal;
@@ -81,13 +101,14 @@ input {
     flex-direction: column;
     align-items: center;
 }
+
 #comment-field {
     width: 400px;
     height: 100px;
     margin-bottom: 50px;
 }
 
-.btn-contact-styling{
+.btn-contact-styling {
     display: flex;
     justify-content: center;
     margin-bottom: 100px;
@@ -99,10 +120,62 @@ input {
     justify-content: center;
     margin-bottom: 20px;
 }
+
 .btn-signup-styling {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
+}
+
+.title-info-styling {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.meta-data-styling {
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    font-style: normal;
+    color: #575757;
+    background-color: #F9F9F9;
+    border: solid #BEBEBE;
+    border-radius: 10px;
+    padding: 12px 24px;
+
+}
+.summary-styling {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 250px;
+    margin-right: 250px;
+    font-size: 18px;
+    font-style: normal;
+    color: #575757;
+    background-color: #F9F9F9;
+    border: solid #BEBEBE;
+    border-radius: 10px;
+    padding: 12px 24px;
+    margin-bottom: 20px;
+}
+
+.recipe-list-styling {
+    display: flex;
+    flex-direction: column;
+    margin-left: 250px;
+    margin-right: 250px;
+    font-size: 18px;
+    font-style: normal;
+    color: #575757;
+    background-color: #F9F9F9;
+    border: solid #BEBEBE;
+    border-radius: 10px;
+    padding: 12px 24px;
+    margin-bottom: 20px;
+    list-style-type: decimal;
 }
 
 

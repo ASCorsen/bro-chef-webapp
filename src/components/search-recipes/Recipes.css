@@ -14,14 +14,16 @@
     margin-right: 40px;
 }
 .recipe-data {
-display: inline-block;
 
 
 }
 .recipe-data ul {
     list-style-type: none;
-display: flex;
+    display: flex;
+    justify-content: center;
     flex-grow: 1;
+    margin-left: 60px;
+
 }
 
 .recipe-data li {
