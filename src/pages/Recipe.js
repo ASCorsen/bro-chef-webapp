@@ -1,25 +1,31 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState} from 'react';
 import "../pages/pages.css"
 import Slogan from "../components/slogantext/Slogan";
 import sloganImg from "../assets/sloganimg.png";
 import {Link, useParams} from "react-router-dom";
 import axios from "axios";
+import UserData from "../components/userdata/UserData";
+
 
 const Recipe = () => {
+
+    const apiKey = "?apiKey="
+
     const {id} = useParams();
-
-    const apiKey = ""
-
     const apiData = `https://api.spoonacular.com/recipes/${id}/information${apiKey}&includeNutrition=true`
     const [recipe, setRecipe] = useState(``)
 
+
     useEffect(() => {
+        const source = axios.CancelToken.source()
 
         async function fetchData() {
             try {
-                const result = await axios.get(apiData)
+                const result = await axios.get(apiData,{
+                    cancelToken: source.token,
+                });
+
                 setRecipe(result.data)
-                console.log(result.data)
 
             } catch (e) {
                 console.error(e);
@@ -27,6 +33,10 @@ const Recipe = () => {
         }
 
         fetchData()
+
+        return function cleanup(){
+            source.cancel();
+        }
 
     }, [apiData]);
 
@@ -38,6 +48,7 @@ const Recipe = () => {
                 <p>We gathered some info on how to make your recipe! Want to go back to the home screen? Click <Link
                     to="/">Here</Link></p>
             </Slogan>
+            <UserData/>
             {recipe &&
             <>
                 <div className="recipe-info-styling">

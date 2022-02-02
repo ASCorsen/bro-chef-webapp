@@ -1,14 +1,21 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import './NavBar.css'
 import logo from '../../assets/logonav214.png'
 import {NavLink, useHistory} from "react-router-dom";
 import Button from "../button/Button";
+import {AuthContext} from "../context/AuthContext";
+
 
 const NavBar = () => {
     const history = useHistory()
+    const {logout, isAuth} = useContext(AuthContext)
 
     function signUpFunction() {
         history.push("/sign-up");
+    }
+
+    function logOutFunction() {
+        logout()
     }
 
     return (
@@ -31,11 +38,16 @@ const NavBar = () => {
             </NavLink>
 </span>
             <span className="nav-right-styling">
+
+            { !isAuth?
                 <NavLink to="/log-in" activeClassName="active-link">
-                Log in
-            </NavLink>
+                    Log in </NavLink> : <Button clickHandler={logOutFunction}>Logout</Button>
+            }
+
+                {!isAuth?
                 <Button clickHandler={signUpFunction}
-                >Sign Up</Button>
+                >Sign Up</Button> : ""}
+
 </span>
         </nav>
 

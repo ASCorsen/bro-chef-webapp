@@ -6,7 +6,7 @@ import {useHistory} from "react-router-dom";
 
 const Recipes = () => {
 
-    const apiKey = ""
+    const apiKey = "?apiKey="
 
     const [apiData, setApiData] = useState(``)
     const [searchData, setSearchData] = useState(``)
@@ -23,11 +23,12 @@ const Recipes = () => {
 
         async function fetchData() {
             try {
-                const result = await axios.get(`https://api.spoonacular.com/recipes/complexSearch${apiKey}&number=3&query=${searchData}`,{
+                const result = await axios.get(`https://api.spoonacular.com/recipes/complexSearch${apiKey}&number=3&query=${searchData}`, {
                     cancelToken: source.token,
                 });
-                console.log(result.data.results)
+
                 setApiData(result.data.results)
+
             } catch (e) {
                 console.error(e);
             }
@@ -35,7 +36,8 @@ const Recipes = () => {
 
         if (searchData) {
             fetchData();
-        } return function cleanup() {
+        }
+        return function cleanup() {
             source.cancel();
         }
 
@@ -70,7 +72,8 @@ const Recipes = () => {
 
                             function redirectFunction(e) {
                                 e.preventDefault()
-                                history.push(`/recipe-info/${data.id}`); }
+                                history.push(`/recipe-info/${data.id}`);
+                            }
 
                             return (
                                 <li key={data.id}>
@@ -78,10 +81,10 @@ const Recipes = () => {
                                     <img src={data.image} alt="food"/>
                                     <div className="btn-login-styling">
                                         <Button
-                                        clickHandler={redirectFunction}
+                                            clickHandler={redirectFunction}
                                         >Recipe Info</Button>
                                     </div>
-                                </li> )
+                                </li>)
                         })}
                     </ul>
                 </>}

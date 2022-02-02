@@ -2,15 +2,32 @@ import React, {useState} from 'react';
 import Slogan from "../components/slogantext/Slogan";
 import sloganImg from "../assets/sloganimg.png";
 import Button from "../components/button/Button";
-import {Link} from "react-router-dom";
+import {Link, useHistory} from "react-router-dom";
+import axios from "axios";
+// import {AuthContext} from "../components/context/AuthContext";
 
 const SignUp = () => {
+
+    const history = useHistory()
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    function handleSubmit(e) {
+   async function handleSubmit(e) {
         e.preventDefault()
+       console.log(name, email, password)
+
+       try{
+            await axios.post(`http://localhost:3000/register`,{
+                username: name,
+                email: email,
+                password: password,
+            })
+           history.push("/log-in")
+
+       } catch (e) {
+            console.error(e)
+       }
 
     }
 
