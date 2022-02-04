@@ -5,7 +5,6 @@ import {NavLink, useHistory} from "react-router-dom";
 import Button from "../button/Button";
 import {AuthContext} from "../context/AuthContext";
 
-
 const NavBar = () => {
     const history = useHistory()
     const {logout, isAuth} = useContext(AuthContext)

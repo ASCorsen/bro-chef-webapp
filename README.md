@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+﻿Installatiehandleiding
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![](Aspose.Words.8c1464cd-728d-46df-ab45-6a5192342588.001.jpeg)
 
-## Available Scripts
+Inleiding
 
-In the project directory, you can run:
+This application provides users a simple way to calculate your calorie intake and the ability to search for recipes and cooking instructions.
 
-### `npm start`
+Requirements
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- To run this application you need an IDE, for example; Webstorm, Visual Studio Code, Eclipse or any other.
+- You need an API key provided by Spoonacular, you can register a free key to make limited get requests. Link: https://spoonacular.com/food-api
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+API-Key Installation
 
-### `npm test`
+- ../src/components/search-recipes/Recipes.js line 9. const apiKey = "?apiKey=YOUR\_KEY"
+- ../src/pages/Recipe.js: line 12. const apiKey = "?apiKey=YOUR\_KEY"
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Start the Project from your IDE
 
-### `npm run build`
+- Install Node.js and NPM on your system, follow the provided instructions, link: https://docs.npmjs.com/downloading-and-installing-node-js-and-npm
+- On your IDE terminal run the following "npm install", to install required dependencies like Axios, React-router-dom, Eslin, Jwt-decode, and so on.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Getting started
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Launch the web application: type "npm start" on your IDE terminal. The web application will start on your browser at:  http://localhost:3000
+1. Click on the Sign up button and register an account, enter your user account information and press the "Sign Up" button.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![](Aspose.Words.8c1464cd-728d-46df-ab45-6a5192342588.002.png)
 
-### `npm run eject`
+3. You will get redirected on the log in page, enter your user account information that has been provided on the sign up page, and press the "Log in" button
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+![](Aspose.Words.8c1464cd-728d-46df-ab45-6a5192342588.003.png)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. You have been directed back to the homepage. To use the recipe we provided the instructions from the "Our Page" link available on the web application for visiting users.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+![](Aspose.Words.8c1464cd-728d-46df-ab45-6a5192342588.004.jpeg)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+5. You can use the calculator without being required to log in. Click on "Calculate" to view your calories calculations.
 
-## Learn More
+![](Aspose.Words.8c1464cd-728d-46df-ab45-6a5192342588.005.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Please note to fill in all the fields, otherwise you'll be prompted with a warning message.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Styling
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The Styling on the pages have been dynamically set up using CSS - Flexbox. You can re-use components to create new pages, while maintaining the same look and feel. **To get the best viewing experience set your browser width at 1440PX.**

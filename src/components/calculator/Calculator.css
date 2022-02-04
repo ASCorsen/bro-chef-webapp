@@ -37,13 +37,12 @@ background-color: #0E9F6E;
 }
 .calculation-field {
     margin-left: 100px;
-
 }
+
 #calc-btn-color {
     background-color: #F9F9F9;
     color: #0E9F6E;
     font-weight: bold;
-
 
 }
 #calc-btn-color:active {
@@ -51,5 +50,4 @@ background-color: #0E9F6E;
     color: #F9F9F9;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
-
 }

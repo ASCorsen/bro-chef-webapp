@@ -9,7 +9,7 @@ import axios from "axios";
 
 
 const LogIn = () => {
-    const [email, setEmail] = useState('');
+    const [name, setName] = useState('');
     const [password, setPassword] = useState('');
     const {login} = useContext(AuthContext)
 
@@ -17,13 +17,14 @@ const LogIn = () => {
         e.preventDefault()
 
         try {
-           const result = await axios.post(`http://localhost:3000/login`,{
-                email: email,
+            const result = await axios.post(`https://frontend-educational-backend.herokuapp.com/api/auth/signin`, {
+                username: name,
                 password: password,
             })
-            // console.log(result.data)
+
             login(result.data.accessToken)
-        }catch (e){
+
+        } catch (e) {
             console.error(e)
         }
     }
@@ -41,14 +42,14 @@ const LogIn = () => {
                 </p>
             </section>
             <form className="form-styling" onSubmit={handleSubmit}>
-                <label htmlFor="email-field">
+                <label htmlFor="username-field">
                     <input
-                        type="email"
-                        id="email-field"
-                        name="email"
-                        placeholder="Email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
+                        type="name"
+                        id="name-field"
+                        name="name"
+                        placeholder="Username"
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
                     />
                 </label>
                 <label htmlFor="password-field">
@@ -66,11 +67,6 @@ const LogIn = () => {
                     >Log in</Button>
                 </div>
             </form>
-
-
-
-
-
         </div>
     );
 };

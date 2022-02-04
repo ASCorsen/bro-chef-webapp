@@ -15,10 +15,9 @@ const SignUp = () => {
 
    async function handleSubmit(e) {
         e.preventDefault()
-       console.log(name, email, password)
 
        try{
-            await axios.post(`http://localhost:3000/register`,{
+            await axios.post(`https://frontend-educational-backend.herokuapp.com/api/auth/signup`,{
                 username: name,
                 email: email,
                 password: password,

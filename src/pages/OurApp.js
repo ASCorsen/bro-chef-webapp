@@ -1,5 +1,6 @@
 import React from 'react';
 import sloganImg from "../assets/sloganimg.png";
+import guideImg from "../assets/guidepage.png"
 import Slogan from "../components/slogantext/Slogan";
 
 const OurApp = () => {
@@ -21,7 +22,9 @@ const OurApp = () => {
                     The web application can be a tool for insight and routine that contribute to a healthy lifestyle.
                 </p>
                 <h2>Features explained</h2>
-                <p> images en foto's van hoe de app werkt volgt</p>
+                <div className="guide-img-styling">
+                    <img className="guide-size-styling" src={guideImg} alt="instructions"/>
+                </div>
             </article>
         </div>
     );

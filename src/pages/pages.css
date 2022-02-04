@@ -30,7 +30,6 @@ p {
     font-style: italic;
 }
 
-
 .article-content {
     margin-left: 250px;
     margin-right: 250px;
@@ -178,6 +177,12 @@ input {
     list-style-type: decimal;
 }
 
+.guide-img-styling {
+    display: flex;
+    justify-content: center;
+}
 
-
-
+.guide-size-styling {
+    width: 100%;
+    border-radius: 120px;
+}

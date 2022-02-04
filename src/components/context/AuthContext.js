@@ -20,6 +20,7 @@ const AuthContextProvider = ({children}) => {
 
         if (token) {
             const decode = jwt_decode(token);
+            //eslint-disable-next-line
             getUserData(decode.sub, token);
         } else {
             toggleIsAuth({
@@ -27,15 +28,13 @@ const AuthContextProvider = ({children}) => {
                 user: null,
                 status: 'done',
             });
-        }
+        } // eslint-disable-next-line
     }, []);
 
     function login(JWT) {
 
         localStorage.setItem("token", JWT)
         const decode = jwt_decode(JWT)
-        // console.log(decode)
-        // console.log("Ik ben nu ingelogd")
 
         getUserData(decode.sub, JWT)
         history.push("/")
@@ -43,7 +42,7 @@ const AuthContextProvider = ({children}) => {
 
     async function getUserData(id, token) {
         try {
-            const result = await axios.get(`http://localhost:3000/600/users/${id}`, {
+            const result = await axios.get(`https://frontend-educational-backend.herokuapp.com/api/user`, {
                 headers: {
                     "Content-Type": "application/json",
                     Authorization: `Bearer ${token}`
@@ -59,8 +58,6 @@ const AuthContextProvider = ({children}) => {
                 },
                 status: 'done',
             })
-
-            // console.log(result)
 
         } catch (e) {
             console.error(e)
